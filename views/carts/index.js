@@ -8,8 +8,7 @@ app.use('/', mainRouter);
 app.listen(process.env.PORT || 3000);
 console.log("Express server running on port 3000");*/
 
-function fetchShoppingItems()
-{
+$(document).ready(function() {
     var shoppingList = [
         { item: "Apple", value: "R10" },
         { item: "Dick", value: "R20" },
@@ -23,4 +22,4 @@ function fetchShoppingItems()
     });
     
     console.log('done');
-}
+});
