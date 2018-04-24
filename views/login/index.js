@@ -13,9 +13,15 @@ function AttemptLogin()
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    console.log(username);
-    console.log(password);
-
-    window.location.href = '../carts/view.html';
+    if ( (username == "asd") && (password = "asd")) 
+    {
+        console.log(username);
+        console.log(password);
+        window.location.href = '../carts/view.html';
+    }
+    else
+    {
+        console.log("Error");
+    }  
 }
 
