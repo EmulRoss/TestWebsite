@@ -17,7 +17,7 @@ let app = express();
 
 app.listen(process.env.PORT || 3000);
 
-mainRouter.get('/view',function(req, res){
+mainRouter.get('view',function(req, res){
     res.sendFile(path.join(__dirname,'views', 'login', 'view.html'));
 });
 module.exports = mainRouter;
