@@ -26,7 +26,11 @@ module.exports = mainRouter;
 let path = require('path');
 let express = require('express');
 let app = express();
-let mainRouter = require('./mainRoutes');
+let mainRouter = express.Router();
+
+mainRouter.get('view',function(req, res){
+    res.sendFile(path.join(__dirname,'views','login','view.html'));
+});
 
 app.use('/', mainRouter);
 

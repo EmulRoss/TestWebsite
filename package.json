@@ -2,14 +2,14 @@
   "name": "lab_2",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "views/login/view.html",
   "dependencies": {
     "botbuilder": "^3.2.3",
     "express": "^4.16.2"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server.js"  
+    "start": "node views/login/view.html"  
   },
   "repository": {
     "type": "git",
