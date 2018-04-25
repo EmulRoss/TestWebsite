@@ -28,11 +28,12 @@ let express = require('express');
 let app = express();
 let mainRouter = express.Router();
 
-mainRouter.get('view',function(req, res){
+
+mainRouter.get('/',function(req, res){
     res.sendFile(path.join(__dirname,'views','login','view.html'));
 });
 
-app.use('/', mainRouter);
+app.use('/',mainRouter);
 
 app.listen(process.env.PORT || 3000);
 console.log("Express server running on port 3000");
