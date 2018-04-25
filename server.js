@@ -12,7 +12,9 @@ let path = require('path');
 let express = require('express');
 let mainRouter = express.Router();
 
-mainRouter.get('views',function(req, res){
-    res.sendFile(path.join(__dirname,'views','login/view.html'));
+mainRouter.get('/view',function(req, res){
+    res.sendFile(path.join(__dirname,'views/login','view.html'));
 });
 module.exports = mainRouter;
+
+//window.location.href = "./views/login/view.html'";
