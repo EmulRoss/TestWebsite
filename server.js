@@ -8,12 +8,14 @@ app.use('/', mainRouter);
 app.listen(process.env.PORT || 3000);
 console.log("Express server running on port 3000");*/
 
+//var port = process.env.PORT || config.APP_PORT
+
 let path = require('path');
 let express = require('express');
 let mainRouter = express.Router();
 
 mainRouter.get('/view',function(req, res){
-    res.sendFile(path.join(__dirname,'views/login','view.html'));
+    res.sendFile(path.join(__dirname,'views', 'login', 'view.html'));
 });
 module.exports = mainRouter;
 
