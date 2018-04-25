@@ -1,39 +1,30 @@
-/*let path = require('path');
-let express = require('express');
-
-let mainRouter = require('./mainRoutes');
-
-app.use('/', mainRouter);
-
-app.listen(process.env.PORT || 3000);
-console.log("Express server running on port 3000");
-
 let path = require('path');
 let express = require('express');
-let mainRouter = express.Router();
 let app = express();
+let mainRouter = express.Router();
+let fileRouter = express.Router();
 
-app.use('/', mainRouter);
-app.listen(process.env.PORT || 3000);
-
-mainRouter.get('view',function(req, res){
-    res.sendFile(path.join(__dirname,'views', 'login', 'view.html'));
+fileRouter.get('/login_index',function(req, res) {
+    res.sendFile(path.join(__dirname,'views','login','index.js'));
 });
-module.exports = mainRouter;
 
-//window.location.href = "./views/login/view.html'";*/
+fileRouter.get('/carts_index',function(req, res) {
+    res.sendFile(path.join(__dirname,'views','carts','index.js'));
+});
 
-let path = require('path');
-let express = require('express');
-let app = express();
-let mainRouter = express.Router();
-
+fileRouter.get('/jquery-latest.min',function(req, res) {
+    res.sendFile(path.join(__dirname,'views','jquery-latest.min.js'));
+});
 
 mainRouter.get('/',function(req, res){
     res.sendFile(path.join(__dirname,'views','login','view.html'));
 });
+mainRouter.get('/carts',function(req, res){
+    res.sendFile(path.join(__dirname,'views','carts','view.html'));
+});
 
 app.use('/',mainRouter);
+app.use(fileRouter);
 
 app.listen(process.env.PORT || 3000);
 console.log("Express server running on port 3000");
