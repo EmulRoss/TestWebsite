@@ -1,17 +1,19 @@
 {
-  "name": "Wild_Cart",
+  "name": "lab_2",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.16.2",
-    "fs": "^0.0.1-security",
-    "readfile": "^1.0.1"
+    "botbuilder": "^3.2.3",
+    "express": "^4.16.2"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server"  
+    "start": "node server.js"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmulRoss/TestWebsite"
   },
   "author": "",
   "license": "ISC"
