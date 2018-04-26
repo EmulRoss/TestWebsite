@@ -1,25 +1,17 @@
-/*let path = require('path');
-let express = require('express');
-let app = express();
-let mainRouter = require('./mainRoutes');
-
-app.use('/', mainRouter);
-
-app.listen(process.env.PORT || 3000);
-console.log("Express server running on port 3000");*/
-
+//when the document is ready then start the function using jQuery
 $(document).ready(function() {
+    //create a list of items
     var shoppingList = [
         { item: "Apple", value: "R10" },
         { item: "Mango", value: "R20" },
         { item: "Banana", value: "R30" },
     ];
-    
+    //clear the shopping list in the html
     $('#shoppingList').empty();
-    
+    //add the new list to the shopping list in the html
     $.each(shoppingList, function (i) {
         $('#shoppingList').append("<li>ITEM: " + shoppingList[i].item + "<br><br>VALUE: " + shoppingList[i].value + "</li>");
     });
-    
+    //log when action complete
     console.log('done');
 });
