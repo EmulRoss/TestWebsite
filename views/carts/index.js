@@ -11,8 +11,8 @@ console.log("Express server running on port 3000");*/
 $(document).ready(function() {
     var shoppingList = [
         { item: "Apple", value: "R10" },
-        { item: "Dick", value: "R20" },
-        { item: "ItsWednesdayMyDudes", value: "R30" },
+        { item: "Mango", value: "R20" },
+        { item: "Banana", value: "R30" },
     ];
     
     $('#shoppingList').empty();
