@@ -12,6 +12,18 @@ fileRouter.get('/carts_index',function(req, res) {
     res.sendFile(path.join(__dirname,'views','carts','index.js'));
 });
 
+fileRouter.get('/carts_styles',function(req, res) {
+    res.sendFile(path.join(__dirname,'views','carts','styles.css'));
+});
+
+fileRouter.get('/items_index',function(req, res) {
+    res.sendFile(path.join(__dirname,'views','items','index.js'));
+});
+
+fileRouter.get('/items_styles',function(req, res) {
+    res.sendFile(path.join(__dirname,'views','items','styles.css'));
+});
+
 fileRouter.get('/jquery-latest.min',function(req, res) {
     res.sendFile(path.join(__dirname,'views','jquery-latest.min.js'));
 });
@@ -22,6 +34,10 @@ mainRouter.get('/',function(req, res){
 mainRouter.get('/carts',function(req, res){
     res.sendFile(path.join(__dirname,'views','carts','view.html'));
 });
+mainRouter.get('/items',function(req, res){
+    res.sendFile(path.join(__dirname,'views','items','view.html'));
+});
+
 
 app.use('/',mainRouter);
 app.use(fileRouter);

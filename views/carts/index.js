@@ -23,7 +23,7 @@ var select = document.getElementsByClassName("select");
 var i;
 for (i = 0; i < select.length; i++) {
   select[i].onclick = function() {
-    window.location.href = '../items/view.html';
+    window.location.href = '/items';//'../items/view.html';
   }
 }
 
@@ -74,7 +74,7 @@ function newElement() {
 
   for (i = 0; i < select.length; i++) {
     select[i].onclick = function() {
-      window.location.href = '../items/view.html';
+      window.location.href = 'items';//'../items/view.html';
     }
   }
   
